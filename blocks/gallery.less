@@ -1,0 +1,36 @@
+.gallery {
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+.gallery__btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  i {
+    color: #FFFFFF;
+    font-size: 50px;
+  }
+  &_next {
+    right: 10px;
+  }
+  &_prev {
+    z-index: 10;
+    left: 10px;
+  }
+}
+.slick-track {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .gallery {
+    flex-wrap: wrap;
+    a {
+      flex: 1 1 50%;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.booking {
+  background-color: #FFFFFF;
+  .section__title {
+    margin-bottom: 23px;
+  }
+}
+.booking__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  .btn {
+    width: 100%;
+    grid-column: ~"1/3";
+  }
+}
+input {
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 20px;
+  color: rgba(51, 51, 51, 0.5);
+  background-color: #E5E5E5;
+  border: none;
+  border-radius: 5px;
+}
+@media (max-width: 1023px) {
+  .booking {
+    .section__text {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+    .section__image {
+      display: none;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .booking__form {
+    grid-template-columns: 1fr;
+    .btn { grid-column: 1; }
+  }
+}

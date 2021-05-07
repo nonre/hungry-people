@@ -1,0 +1,218 @@
+.header {
+  position: relative;
+  height: 100vh;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background: url("img/bg-header.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #FFFFFF;
+}
+/* ----- navigation ----- */
+.main__nav {
+  position: relative;
+}
+.main-nav__list {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.main-nav__list-item {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  a {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:nth-child(4) {
+    margin-right: 20%;
+  }
+}
+.main-nav__toggle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 2;
+  width: 63px;
+  height: 55px;
+  i {
+    font-size: 25px;
+  }
+}
+/* ----- end navigation ----- */
+.header__logo {
+  max-width: 100%;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__title {
+  font-family: "Banny", sans-serif;
+  font-size: 96px;
+  padding: 21px 0;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    .text-decoration();
+  }
+}
+.header__subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header__wrapper {
+  height: calc(100% - 100px);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+}
+.header__middle {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header__buttons {
+  display: flex;
+  justify-content: center;
+  .btn:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+.header__schedule {
+  margin-left: -150px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  transform: rotate(-90deg);
+  order: -1;
+}
+.header__social {
+  margin-left: auto;
+}
+.social__item a{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    background: @yellow;
+    border-color: transparent;
+    transition: all 300ms ease-in-out;
+  }
+  i {
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+}
+@media (max-width: 1024px) {
+  .header__logo {
+    width: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 55px 20px 40px 20px;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__title {
+    font-size: 40px;
+  }
+  .main-nav__toggle {
+    display: block;
+  }
+  .main-nav__list {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0, 0, 0, .9);
+    padding: 100px 0;
+    transition: left 0.3s ease 0s;
+    overflow: auto; //прокрутка по вертикали, когда элементов много
+    z-index: 1;
+    &_active {
+        left: 0;
+        &:active {
+          display: none;
+        }
+    }
+  }
+  .main-nav__list-item {
+    display: block;
+    border: none;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      font-size: 24px;
+      line-height: 26px;
+      margin: 10px;
+    }
+  }
+  .header__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header__middle {
+    //flex: 0 1;
+    border: none;
+  }
+  .header__schedule {
+    margin: 0;
+    transform: none;
+  }
+  .header__social {
+    margin: 0;
+  }
+  .social__list {
+    display: flex;
+  }
+  .social__item a {
+    margin: 0 10px 0 0;
+  }
+  .social__item:last-child a {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .header__buttons {
+    flex-direction: column;
+    .btn:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+}

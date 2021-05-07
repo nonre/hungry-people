@@ -1,0 +1,71 @@
+.menu {
+  flex-direction: column;
+}
+.menu-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.menu-tab {
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 15px 0;
+  min-width: 120px;
+  text-align: center;
+  cursor: pointer;
+  &:hover::after {
+    .text-decoration();
+  }
+  &:not(:last-child)::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.2);
+  }
+}
+.menu-items {
+  width: 100%;
+  display: grid;
+  //justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(362px, 1fr));
+  grid-column-gap: 86px;
+  grid-row-gap: 30px;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-item__title,
+.menu-item__price {
+  font-family: "Banny";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.menu-item__description {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(51, 51, 51, 0.5);
+}
+@media (max-width: 1023px) {
+  .menu-items {
+    grid-column-gap: 43px;
+  }
+}
+@media (max-width: 425px) {
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+  .menu-tab {
+    //max-width: 100px;
+  }
+  .menu-tab::before {
+    display: none;
+  }
+}
