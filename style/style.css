@@ -15,7 +15,7 @@
 }
 @font-face {
   font-family: 'Banny';
-  src: url('fonts/Banny-BoldRound.ttf');
+  src: url('../fonts/Banny-BoldRound.ttf');
   font-weight: bold;
   font-style: normal;
 }
@@ -24,7 +24,7 @@
   height: 100vh;
   padding: 0 80px;
   box-sizing: border-box;
-  background: url("img/bg-header.jpg") center no-repeat;
+  background: url("../img/bg-header.jpg") center no-repeat;
   background-size: cover;
   text-align: center;
   color: #FFFFFF;
@@ -244,10 +244,6 @@
     margin: 0 0 10px 0;
   }
 }
-.team {
-  background: url("img/bg-1.jpg") center no-repeat;
-  background-size: cover;
-}
 .section {
   position: relative;
   display: flex;
@@ -405,6 +401,10 @@
     margin: 0;
   }
 }
+.team {
+  background: url("../img/bg-1.jpg") center no-repeat;
+  background-size: cover;
+}
 .booking {
   background-color: #FFFFFF;
 }
@@ -523,7 +523,7 @@ input {
   }
 }
 .specialities {
-  background: url("img/bg-2.jpg") center no-repeat;
+  background: url("../img/bg-2.jpg") center no-repeat;
   background-size: cover;
 }
 .menu {
@@ -602,7 +602,7 @@ input {
   }
 }
 .events {
-  background: url("img/bg-2.jpg") center no-repeat;
+  background: url("../img/bg-2.jpg") center no-repeat;
   background-size: cover;
 }
 .events .section__extra {
