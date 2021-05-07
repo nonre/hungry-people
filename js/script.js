@@ -36,7 +36,6 @@ if (menuLinks.length > 0) {
                 top: blockValue,
                 behavior: "smooth"
             });
-            e.preventDefault();
         }
     }
 }

@@ -175,6 +175,7 @@
   }
   .main-nav__toggle {
     display: block;
+    z-index: 9999;
   }
   .main-nav__list {
     display: block;
@@ -187,13 +188,10 @@
     padding: 100px 0;
     transition: left 0.3s ease 0s;
     overflow: auto;
-    z-index: 1;
+    z-index: 666;
   }
   .main-nav__list_active {
     left: 0;
-  }
-  .main-nav__list_active:active {
-    display: none;
   }
   .main-nav__list-item {
     display: block;
@@ -652,6 +650,9 @@ figcaption {
 .gallery__btn_prev {
   z-index: 10;
   left: 10px;
+}
+.slick-slide {
+  outline: none;
 }
 .slick-track {
   display: flex;
